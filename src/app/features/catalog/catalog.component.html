@@ -1,0 +1,11 @@
+<div class="catalog">
+  <h2>Our Premium Bikes</h2>
+  <div class="bike-list">
+    <app-bike-card
+      *ngFor="let bike of bikes"
+      [bike]="bike"
+      (addToCart)="addToCart(bike)"
+    >
+    </app-bike-card>
+  </div>
+</div>
