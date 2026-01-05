@@ -22,11 +22,28 @@
             <select
               id="category"
               [(ngModel)]="selectedCategory"
-              (change)="applyFilters()"
+              (change)="selectedType = 'all'; applyFilters()"
             >
               <option value="all">All Categories</option>
               <option value="bike">Bikes</option>
               <option value="accessory">Accessories</option>
+            </select>
+          </div>
+
+          <div
+            class="filter-group"
+            *ngIf="selectedCategory === 'bike' || selectedCategory === 'all'"
+          >
+            <label for="type">Bike Type:</label>
+            <select
+              id="type"
+              [(ngModel)]="selectedType"
+              (change)="applyFilters()"
+            >
+              <option value="all">All Types</option>
+              <option *ngFor="let type of availableTypes" [value]="type">
+                {{ type }}
+              </option>
             </select>
           </div>
 

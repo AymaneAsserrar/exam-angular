@@ -18,6 +18,8 @@ export class CatalogComponent implements OnInit {
 
   searchTerm: string = "";
   selectedCategory: string = "all";
+  selectedType: string = "all";
+  availableTypes: string[] = [];
   maxPrice: number | null = null;
   pageTitle: string = "Our Products";
 
@@ -64,6 +66,7 @@ export class CatalogComponent implements OnInit {
         category: "accessory",
       }));
 
+      this.availableTypes = [...new Set(bikes.map((b) => b.type))];
       this.allProducts = [...bikesWithCategory, ...accessoriesWithCategory];
       this.applyFilters();
     });
@@ -78,10 +81,13 @@ export class CatalogComponent implements OnInit {
       const matchesCategory =
         this.selectedCategory === "all" ||
         product.category === this.selectedCategory;
+      const matchesType =
+        this.selectedType === "all" ||
+        (product.category === "bike" && product.type === this.selectedType);
       const matchesPrice =
         this.maxPrice === null || product.price <= this.maxPrice;
 
-      return matchesSearch && matchesCategory && matchesPrice;
+      return matchesSearch && matchesCategory && matchesType && matchesPrice;
     });
   }
 
