@@ -52,6 +52,24 @@ nav a.active {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+.nav-button {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.nav-button:hover {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
 main {
   padding: 40px 20px;
   min-height: 80vh;
