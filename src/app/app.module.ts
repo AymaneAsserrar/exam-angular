@@ -12,6 +12,7 @@ import { CartSummaryComponent } from "./shared/components/cart-summary/cart-summ
 import { FooterComponent } from "./shared/components/footer/footer.component";
 import { ContactComponent } from "./features/contact/contact.component";
 import { CurrencyFormatPipe } from "./shared/pipes/currency-format.pipe";
+import { HomeComponent } from "./features/home/home.component";
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { CurrencyFormatPipe } from "./shared/pipes/currency-format.pipe";
     FormsModule,
     BikeCardComponent,
     ContactComponent,
+    HomeComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],

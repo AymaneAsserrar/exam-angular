@@ -1,0 +1,35 @@
+<div class="home-container">
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Bike Shop</h1>
+      <p>Find your perfect ride today. Quality bikes for every terrain.</p>
+      <a routerLink="/catalog" fragment="bikes" class="cta-button">Shop Now</a>
+    </div>
+  </section>
+
+  <section class="featured-section">
+    <h2>Featured Bikes</h2>
+    <div class="featured-grid">
+      <app-bike-card
+        *ngFor="let bike of featuredBikes"
+        [product]="bike"
+        (addToCart)="addToCart($event)"
+      ></app-bike-card>
+    </div>
+  </section>
+
+  <section class="info-section">
+    <div class="info-card">
+      <h3>Expert Service</h3>
+      <p>Our mechanics are certified and experienced.</p>
+    </div>
+    <div class="info-card">
+      <h3>Quality Parts</h3>
+      <p>We use only the best parts for repairs and upgrades.</p>
+    </div>
+    <div class="info-card">
+      <h3>Community</h3>
+      <p>Join our weekly group rides and events.</p>
+    </div>
+  </section>
+</div>

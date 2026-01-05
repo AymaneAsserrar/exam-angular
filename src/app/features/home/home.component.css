@@ -1,0 +1,76 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://blocherpartners.com/media/pages/projekte/rose-bike-store-koeln/ac20a7ca8c-1706710998/rose-bike-store-koeln-01-2500x1053-crop.webp");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  border-radius: 8px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: var(--primary-dark);
+}
+
+.featured-section {
+  padding: 2rem 0;
+}
+
+.featured-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.info-section {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.info-card {
+  text-align: center;
+  padding: 1rem;
+  flex: 1;
+  min-width: 200px;
+}
