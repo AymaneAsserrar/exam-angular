@@ -42,22 +42,6 @@
   background-color: var(--primary-dark);
 }
 
-.featured-section {
-  padding: 2rem 0;
-}
-
-.featured-section h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.featured-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  padding: 0 1rem;
-}
-
 .info-section {
   display: flex;
   justify-content: space-around;
