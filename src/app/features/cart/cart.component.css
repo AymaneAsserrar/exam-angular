@@ -49,8 +49,17 @@
 .close-button {
   background: none;
   border: none;
-  font-size: 24px;
   cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.close-button:hover {
+  color: #ff4081;
 }
 
 .cart-item {
