@@ -1,34 +1,27 @@
 [
   {
-    "id": 101,
-    "name": "Helmet",
-    "description": "Safety first! A durable and lightweight helmet.",
-    "price": 49.99,
-    "imageUrl": "data:image/jpeg;base64,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Cxzd9gBw/D4Kd38yzpJtb/SyHM4X8OXosjSAiIqCIiAiIgIiICIiAiIgIiIBUEKICioKKAiIgp6+ijnifDMxr4pGlj2OFwWnmCucd5OxhwmZpbJmpp3O9neT9I1zbOyu7yL3Duvmullge9jYuXFIIjTubx6YyOYx+jXh4Ac3N7p7IseXMdbgLTsBvWhnZFT130czWMj9pc4GGVwFi5xsOGT3HS559FtBrwRcEEEXBGosuRa2hnpJDFURPjeObHtLXW7wPeHiFkezW3tfQhrYZs8LeUE15I7dQ3q30KDplFqWi31xm3Ho3jTUxStfr4BwGnqq1u+iivY09Vl+1aI/LMgr99Msf8N4T5HNdLNFw2N5vLDmcD3ADW/eB3rU2w2Evqq2KKCJwY0sNRLnJAbG4FztT2TyFh1IVbvD2ybiNQHMzimibaFrm5XXIBe51r6k6c+QCznchhbWR1E2rsxijD7gtzFofKG28XNBP3fBQbRCIioIiICIiAiIgIiICIiAiIgIiICgooggooiAiIgIiILfjODU9ZE6GpiZIwjk4doeLXDVp8QtN7T7mqiNzpMPkErNSIpCGSjwv9V3noVvREHKNbs1iUAJnoKoNHN4hkc39TQR81TMoKgtLhS1eUal/s8pYB3l1rWXW1kc0EWI0OhHSyDkujhPFYC2/auxo1DpPdBHdfW3W1uq6W2Fw91PQU8cjS2Us4kwPPiPJc6/cdeSqItl6BsrZm0dM2Vrg5sjYWBwcORFhofFXdQERFQREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREH/9k=",
-    "category": "Safety"
+    "name": "Casque vélo Urban Safe",
+    "description": "Casque léger et ventilé offrant une excellente protection pour les trajets urbains.",
+    "price": 59.99
   },
   {
-    "id": 102,
-    "name": "Bike Lock",
-    "description": "Heavy-duty steel lock to keep your bike secure.",
-    "price": 29.99,
-    "imageUrl": "https://m.media-amazon.com/images/I/61hA4KqeSgL._AC_UF894,1000_QL80_.jpg",
-    "category": "Security"
+    "name": "Antivol en U renforcé",
+    "description": "Antivol en acier trempé résistant aux coupures, idéal pour sécuriser votre vélo en ville.",
+    "price": 39.9
   },
   {
-    "id": 103,
-    "name": "Water Bottle",
-    "description": "Insulated water bottle to keep you hydrated.",
-    "price": 12.99,
-    "imageUrl": "https://cdn.mos.cms.futurecdn.net/LBFPVwsSMZqHV2sWUX4Eq9.jpg",
-    "category": "Hydration"
+    "name": "Kit d’éclairage LED avant/arrière",
+    "description": "Éclairage LED rechargeable par USB pour une visibilité optimale de nuit.",
+    "price": 24.5
   },
   {
-    "id": 104,
-    "name": "Lights Set",
-    "description": "Front and rear lights for night riding visibility.",
-    "price": 34.99,
-    "imageUrl": "https://tm-prd-cdn.themarket.co.nz/resizer/view?key=766b92af3c1cda5df7b8f517bb59cd34&b=productimages&w=1080&h=1080",
-    "category": "Safety"
+    "name": "Pompe à vélo haute pression",
+    "description": "Pompe compacte avec manomètre intégré, compatible valves Presta et Schrader.",
+    "price": 29.0
+  },
+  {
+    "name": "Sacoche de selle étanche",
+    "description": "Sacoche résistante à l’eau pour transporter outils et effets personnels.",
+    "price": 19.99
   }
 ]

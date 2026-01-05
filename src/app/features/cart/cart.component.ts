@@ -26,8 +26,8 @@ export class CartComponent implements OnInit {
     this.cartService.closeCart();
   }
 
-  removeFromCart(productId: number): void {
-    this.cartService.removeFromCart(productId);
+  removeFromCart(productName: string): void {
+    this.cartService.removeFromCart(productName);
     this.loadCartItems();
   }
 

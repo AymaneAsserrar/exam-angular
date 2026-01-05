@@ -34,7 +34,7 @@ export class CartService {
 
   addToCart(product: Bike | Accessory): void {
     const existingItem = this.cartItems.find(
-      (item) => item.product.id === product.id
+      (item) => item.product.name === product.name
     );
     if (existingItem) {
       existingItem.quantity++;
@@ -44,9 +44,9 @@ export class CartService {
     this.cartItemsSubject.next(this.cartItems);
   }
 
-  removeFromCart(productId: number): void {
+  removeFromCart(productName: string): void {
     this.cartItems = this.cartItems.filter(
-      (item) => item.product.id !== productId
+      (item) => item.product.name !== productName
     );
     this.cartItemsSubject.next(this.cartItems);
   }

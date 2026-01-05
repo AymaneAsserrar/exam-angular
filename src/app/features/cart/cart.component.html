@@ -34,7 +34,10 @@
           <p>Price: {{ item.product.price | currency }}</p>
           <p>Quantity: {{ item.quantity }}</p>
         </div>
-        <button (click)="removeFromCart(item.product.id)" class="remove-button">
+        <button
+          (click)="removeFromCart(item.product.name)"
+          class="remove-button"
+        >
           Remove
         </button>
       </div>
