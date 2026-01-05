@@ -1,23 +1,75 @@
 <div class="catalog">
   <app-home id="home"></app-home>
-  <h2 id="bikes">Our Premium Bikes</h2>
-  <div class="bike-list">
-    <app-bike-card
-      *ngFor="let bike of bikes"
-      [product]="bike"
-      (addToCart)="addToCart($event)"
-    >
-    </app-bike-card>
-  </div>
 
-  <h2 id="accessories">Accessories</h2>
-  <div class="bike-list">
-    <app-bike-card
-      *ngFor="let accessory of accessories"
-      [product]="accessory"
-      (addToCart)="addToCart($event)"
-    >
-    </app-bike-card>
+  <div class="catalog-layout">
+    <aside class="filters-sidebar">
+      <div class="filters-section">
+        <h3>Filter Products</h3>
+        <div class="filters-controls">
+          <div class="filter-group">
+            <label for="search">Search Name:</label>
+            <input
+              type="text"
+              id="search"
+              [(ngModel)]="searchTerm"
+              (input)="applyFilters()"
+              placeholder="Type to search..."
+            />
+          </div>
+
+          <div class="filter-group">
+            <label for="category">Category:</label>
+            <select
+              id="category"
+              [(ngModel)]="selectedCategory"
+              (change)="applyFilters()"
+            >
+              <option value="all">All Categories</option>
+              <option value="bike">Bikes</option>
+              <option value="accessory">Accessories</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="price"
+              >Max Price:
+              {{ maxPrice ? (maxPrice | currency : "EUR") : "Any" }}</label
+            >
+            <input
+              type="range"
+              id="price"
+              min="0"
+              max="3000"
+              step="50"
+              [(ngModel)]="maxPrice"
+              (input)="applyFilters()"
+            />
+            <button
+              *ngIf="maxPrice !== null"
+              (click)="maxPrice = null; applyFilters()"
+            >
+              Clear
+            </button>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="products-area">
+      <h2 id="products">{{ pageTitle }}</h2>
+      <div class="bike-list">
+        <app-bike-card
+          *ngFor="let product of filteredProducts"
+          [product]="product"
+          (addToCart)="addToCart($event)"
+        >
+        </app-bike-card>
+      </div>
+
+      <div *ngIf="filteredProducts.length === 0" class="no-results">
+        <p>No products found matching your criteria.</p>
+      </div>
+    </main>
   </div>
 
   <h2 id="contact">Contact Us</h2>

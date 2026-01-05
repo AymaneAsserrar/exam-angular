@@ -7,17 +7,6 @@
     </div>
   </section>
 
-  <section class="featured-section">
-    <h2>Featured Bikes</h2>
-    <div class="featured-grid">
-      <app-bike-card
-        *ngFor="let bike of featuredBikes"
-        [product]="bike"
-        (addToCart)="addToCart($event)"
-      ></app-bike-card>
-    </div>
-  </section>
-
   <section class="info-section">
     <div class="info-card">
       <h3>Expert Service</h3>
