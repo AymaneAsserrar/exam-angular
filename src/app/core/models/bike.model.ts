@@ -4,4 +4,5 @@ export interface Bike {
   type: string;
   description: string;
   price: number;
+  imageUrl?: string;
 }

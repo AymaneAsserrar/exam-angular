@@ -1,47 +1,102 @@
 # Bike Shop E-Commerce Application
 
-## Overview
-This project is an e-commerce application focused on bikes, allowing users to browse a catalog of bikes and manage a shopping cart. It is built using Angular and follows a modular architecture.
+A modern, responsive e-commerce application for browsing and purchasing bikes and accessories. Built with Angular 15, this application demonstrates a modular architecture with clear separation of concerns.
 
-## Features
-- **Bike Catalog**: Users can view a list of available bikes with details such as name, category, description, and price.
-- **Shopping Cart**: Users can add bikes to their cart, view cart items, and remove items as needed.
-- **Responsive Design**: The application is designed to be responsive and user-friendly across different devices.
+## 🚀 Features
 
-## Project Structure
-The project is organized into several key directories:
-- `src/app`: Contains the main application components, services, and models.
-- `src/assets/data`: Contains static JSON data for the bike catalog.
-- `src/shared`: Contains reusable components and pipes.
+- **Interactive Catalog**: Browse a comprehensive collection of bikes and accessories.
+- **Shopping Cart Management**: Add items to cart, view summaries, and manage quantities seamlessly.
+- **Product Details**: Rich product presentations with `BikeCard` components.
+- **Categorization**: distinct handling for Bikes and Accessories.
+- **Contact & Support**: Dedicated contact section for customer inquiries.
+- **Responsive Layout**: Optimized for various screen sizes.
 
-## Setup Instructions
-1. **Clone the Repository**
-   ```bash
-   git clone <repository-url>
-   cd bike-shop
-   ```
+## 🛠️ Tech Stack
 
-2. **Install Dependencies**
-   ```bash
-   npm install
-   ```
+- **Framework**: [Angular 15](https://angular.io/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: CSS3
+- **Data**: JSON-based local data storage (Assets)
+- **State Management**: RxJS Services
 
-3. **Run the Application**
-   ```bash
-   ng serve
-   ```
-   Navigate to `http://localhost:4200/` in your browser to view the application.
+## 📂 Project Structure
 
-## Technologies Used
-- Angular
-- TypeScript
-- HTML/CSS
-- JSON for data storage
+```
+src/
+├── app/
+│   ├── core/            # Singleton services and models
+│   │   ├── models/      # Data interfaces (Bike, Accessory, CartItem)
+│   │   └── services/    # Business logic (Cart, Catalog services)
+│   ├── features/        # Feature modules
+│   │   ├── cart/        # Shopping cart functionality
+│   │   ├── catalog/     # Product listing pages
+│   │   ├── contact/     # Contact form and info
+│   │   └── home/        # Landing page
+│   └── shared/          # Reusable artifacts
+│       ├── components/  # Shared UI components (Footer, BikeCard)
+│       └── pipes/       # Custom pipes (CurrencyFormat)
+├── assets/
+│   └── data/            # Static data files (bikes.json, accessories.json)
+└── environments/        # Configuration files
+```
 
-## Future Enhancements
-- User authentication and profiles
-- Payment integration
-- Enhanced filtering and sorting options for the bike catalog
+## 🏁 Getting Started
+
+### Prerequisites
+
+- **Node.js**: Ensure you have Node.js installed (v14.20+ or v16.13+ recommended for Angular 15).
+- **Angular CLI**: Install globally via `npm install -g @angular/cli`.
+
+### Installation
+
+1.  **Clone the repository**
+
+    ```bash
+    git clone <repository-url>
+    cd bike-shop
+    ```
+
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
+
+### Development Server
+
+Run the application locally:
+
+```bash
+ng serve
+```
+
+Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+### Build
+
+Build the project for production:
+
+```bash
+ng build
+```
+
+The build artifacts will be stored in the `dist/` directory.
+
+## 🧪 Running Tests
+
+Execute unit tests via [Karma](https://karma-runner.github.io):
+
+```bash
+ng test
+```
+
+## 🤝 Contributing
+
+1.  Fork the Project
+2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4.  Push to the Branch (`git push origin feature/AmazingFeature`)
+5.  Open a Pull Request
 
 ## License
+
 This project is licensed under the MIT License.

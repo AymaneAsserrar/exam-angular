@@ -1,42 +1,36 @@
-[
-  {
-    "id": 1,
-    "name": "Mountain Bike",
-    "category": "Mountain",
-    "description": "A rugged bike designed for off-road cycling.",
-    "price": 500,
-    "imageUrl": "https://images.unsplash.com/photo-1534150034764-046bf225d3fa?q=80&w=1752&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    "id": 2,
-    "name": "Road Bike",
-    "category": "Road",
-    "description": "A lightweight bike built for speed on paved roads.",
-    "price": 700,
-    "imageUrl": "https://images.unsplash.com/photo-1600492110568-f9bf4835500a?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    "id": 3,
-    "name": "Hybrid Bike",
-    "category": "Hybrid",
-    "description": "A versatile bike that combines features of road and mountain bikes.",
-    "price": 600,
-    "imageUrl": "https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    "id": 4,
-    "name": "Electric Bike",
-    "category": "Electric",
-    "description": "A bike equipped with an electric motor for assistance.",
-    "price": 1200,
-    "imageUrl": "https://images.unsplash.com/photo-1618987688327-dc0b28888fe4?q=80&w=1803&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    "id": 5,
-    "name": "BMX Bike",
-    "category": "BMX",
-    "description": "A bike designed for BMX racing and tricks.",
-    "price": 300,
-    "imageUrl": "https://images.unsplash.com/photo-1627403516444-da5d6efa7a8f?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  }
-]
+{
+  "bikes": [
+    {
+      "name": "Vélo de route Carbon Pro",
+      "category": "bike",
+      "type": "Road",
+      "description": "Vélo de route léger en carbone, idéal pour les longues distances et la compétition.",
+      "price": 2499.99,
+      "imageUrl": "https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "name": "VTT Trail Explorer",
+      "category": "bike",
+      "type": "Mountain",
+      "description": "VTT tout-suspendu conçu pour les sentiers techniques et les terrains accidentés.",
+      "price": 1799.5,
+      "imageUrl": "https://images.unsplash.com/photo-1576435728678-68d0fbf94e91?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "name": "Vélo électrique Urban City",
+      "category": "bike",
+      "type": "Electric",
+      "description": "Vélo électrique confortable pour les déplacements urbains quotidiens.",
+      "price": 2190.0,
+      "imageUrl": "https://images.unsplash.com/photo-1620802051782-725fa33db067?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "name": "Gravel Adventure X",
+      "category": "bike",
+      "type": "Gravel",
+      "description": "Vélo gravel polyvalent, adapté aussi bien à la route qu’aux chemins.",
+      "price": 1599.0,
+      "imageUrl": "https://images.unsplash.com/photo-1485965120184-e220f721d03e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    }
+  ]
+}
