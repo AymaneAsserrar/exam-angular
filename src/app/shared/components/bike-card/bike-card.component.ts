@@ -18,4 +18,20 @@ export class BikeCardComponent {
   onAddToCart() {
     this.addToCart.emit(this.product);
   }
+
+  hasCategory(product: Bike | Accessory): boolean {
+    return "category" in product;
+  }
+
+  getCategory(product: Bike | Accessory): string {
+    return (product as Bike).category;
+  }
+
+  hasType(product: Bike | Accessory): boolean {
+    return "type" in product;
+  }
+
+  getType(product: Bike | Accessory): string {
+    return (product as Bike).type;
+  }
 }
