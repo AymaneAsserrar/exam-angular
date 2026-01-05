@@ -64,5 +64,6 @@ export class CartService {
 
   clearCart(): void {
     this.cartItems = [];
+    this.cartItemsSubject.next(this.cartItems);
   }
 }
