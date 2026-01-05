@@ -9,6 +9,8 @@ import { CatalogComponent } from "./features/catalog/catalog.component";
 import { CartComponent } from "./features/cart/cart.component";
 import { BikeCardComponent } from "./shared/components/bike-card/bike-card.component";
 import { CartSummaryComponent } from "./shared/components/cart-summary/cart-summary.component";
+import { FooterComponent } from "./shared/components/footer/footer.component";
+import { ContactComponent } from "./features/contact/contact.component";
 import { CurrencyFormatPipe } from "./shared/pipes/currency-format.pipe";
 
 @NgModule({
@@ -17,8 +19,16 @@ import { CurrencyFormatPipe } from "./shared/pipes/currency-format.pipe";
     CatalogComponent,
     CartComponent,
     CartSummaryComponent,
+    FooterComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, BikeCardComponent],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    BikeCardComponent,
+    ContactComponent,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

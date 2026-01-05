@@ -1,6 +1,7 @@
 import { Component, Input, Output, EventEmitter } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { Bike } from "src/app/core/models/bike.model";
+import { Accessory } from "src/app/core/models/accessory.model";
 import { CurrencyFormatPipe } from "../../pipes/currency-format.pipe";
 
 @Component({
@@ -11,10 +12,10 @@ import { CurrencyFormatPipe } from "../../pipes/currency-format.pipe";
   styleUrls: ["./bike-card.component.css"],
 })
 export class BikeCardComponent {
-  @Input() bike!: Bike;
-  @Output() addToCart = new EventEmitter<Bike>();
+  @Input() product!: Bike | Accessory;
+  @Output() addToCart = new EventEmitter<Bike | Accessory>();
 
   onAddToCart() {
-    this.addToCart.emit(this.bike);
+    this.addToCart.emit(this.product);
   }
 }
