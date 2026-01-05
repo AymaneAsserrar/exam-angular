@@ -1,18 +1,18 @@
 <div class="bike-card">
   <div class="image-container">
     <img
-      [src]="bike.imageUrl"
-      [alt]="bike.name"
+      [src]="product.imageUrl"
+      [alt]="product.name"
       class="bike-image"
       onerror="this.src='https://placehold.co/600x400?text=No+Image'"
     />
   </div>
   <div class="card-content">
-    <h3 class="bike-name">{{ bike.name }}</h3>
-    <span class="bike-category">{{ bike.category }}</span>
-    <p class="bike-description">{{ bike.description }}</p>
+    <h3 class="bike-name">{{ product.name }}</h3>
+    <span class="bike-category">{{ product.category }}</span>
+    <p class="bike-description">{{ product.description }}</p>
     <div class="card-footer">
-      <span class="bike-price">{{ bike.price | currencyFormat }}</span>
+      <span class="bike-price">{{ product.price | currencyFormat }}</span>
       <button (click)="onAddToCart()" class="add-to-cart-button">
         Add to Cart
       </button>

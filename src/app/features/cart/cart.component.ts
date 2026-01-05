@@ -26,14 +26,14 @@ export class CartComponent implements OnInit {
     this.cartService.closeCart();
   }
 
-  removeFromCart(bikeId: number): void {
-    this.cartService.removeFromCart(bikeId);
+  removeFromCart(productId: number): void {
+    this.cartService.removeFromCart(productId);
     this.loadCartItems();
   }
 
   calculateTotal(): void {
     this.total = this.cartItems.reduce(
-      (sum, item) => sum + item.bike.price * item.quantity,
+      (sum, item) => sum + item.product.price * item.quantity,
       0
     );
   }

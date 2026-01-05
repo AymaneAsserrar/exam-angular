@@ -2,6 +2,7 @@ import { Injectable } from "@angular/core";
 import { BehaviorSubject } from "rxjs";
 import { map } from "rxjs/operators";
 import { Bike } from "../models/bike.model";
+import { Accessory } from "../models/accessory.model";
 import { CartItem } from "../models/cart-item.model";
 
 @Injectable({
@@ -31,20 +32,22 @@ export class CartService {
     this.isCartOpenSubject.next(false);
   }
 
-  addToCart(bike: Bike): void {
+  addToCart(product: Bike | Accessory): void {
     const existingItem = this.cartItems.find(
-      (item) => item.bike.id === bike.id
+      (item) => item.product.id === product.id
     );
     if (existingItem) {
       existingItem.quantity++;
     } else {
-      this.cartItems.push({ bike, quantity: 1 });
+      this.cartItems.push({ product, quantity: 1 });
     }
     this.cartItemsSubject.next(this.cartItems);
   }
 
-  removeFromCart(bikeId: number): void {
-    this.cartItems = this.cartItems.filter((item) => item.bike.id !== bikeId);
+  removeFromCart(productId: number): void {
+    this.cartItems = this.cartItems.filter(
+      (item) => item.product.id !== productId
+    );
     this.cartItemsSubject.next(this.cartItems);
   }
 
@@ -54,7 +57,7 @@ export class CartService {
 
   getTotalPrice(): number {
     return this.cartItems.reduce(
-      (total, item) => total + item.bike.price * item.quantity,
+      (total, item) => total + item.product.price * item.quantity,
       0
     );
   }

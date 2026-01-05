@@ -3,7 +3,24 @@
     <h1>Bike Shop</h1>
     <nav>
       <ul>
-        <li><a routerLink="/catalog" routerLinkActive="active">Catalog</a></li>
+        <li>
+          <a routerLink="/catalog" fragment="bikes" routerLinkActive="active"
+            >Bikes</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/catalog"
+            fragment="accessories"
+            routerLinkActive="active"
+            >Accessories</a
+          >
+        </li>
+        <li>
+          <a routerLink="/catalog" fragment="contact" routerLinkActive="active"
+            >Contact</a
+          >
+        </li>
         <li>
           <button (click)="openCart()" class="nav-button">
             Cart <span class="badge">{{ cartCount$ | async }}</span>
@@ -17,6 +34,4 @@
   <router-outlet></router-outlet>
 </main>
 <app-cart *ngIf="isCartOpen$ | async"></app-cart>
-<footer>
-  <p>&copy; 2026 Bike Shop. All rights reserved.</p>
-</footer>
+<app-footer></app-footer>
