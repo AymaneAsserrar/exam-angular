@@ -1,0 +1,21 @@
+.cart-summary {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-top: 20px;
+}
+
+.cart-summary h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.cart-summary p {
+    margin: 5px 0;
+}
+
+.cart-summary .total {
+    font-weight: bold;
+    font-size: 1.2em;
+}
