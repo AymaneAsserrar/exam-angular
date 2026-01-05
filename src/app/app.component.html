@@ -4,7 +4,11 @@
     <nav>
       <ul>
         <li><a routerLink="/catalog" routerLinkActive="active">Catalog</a></li>
-        <li><button (click)="openCart()" class="nav-button">Cart</button></li>
+        <li>
+          <button (click)="openCart()" class="nav-button">
+            Cart <span class="badge">{{ cartCount$ | async }}</span>
+          </button>
+        </li>
       </ul>
     </nav>
   </div>
