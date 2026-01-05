@@ -9,6 +9,7 @@ import { CartService } from "./core/services/cart.service";
 export class AppComponent {
   title = "Bike Shop";
   isCartOpen$ = this.cartService.isCartOpen$;
+  cartCount$ = this.cartService.cartCount$;
 
   constructor(private cartService: CartService) {}
 
