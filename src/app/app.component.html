@@ -4,7 +4,7 @@
     <nav>
       <ul>
         <li><a routerLink="/catalog" routerLinkActive="active">Catalog</a></li>
-        <li><a routerLink="/cart" routerLinkActive="active">Cart</a></li>
+        <li><button (click)="openCart()" class="nav-button">Cart</button></li>
       </ul>
     </nav>
   </div>
@@ -12,6 +12,7 @@
 <main>
   <router-outlet></router-outlet>
 </main>
+<app-cart *ngIf="isCartOpen$ | async"></app-cart>
 <footer>
   <p>&copy; 2026 Bike Shop. All rights reserved.</p>
 </footer>

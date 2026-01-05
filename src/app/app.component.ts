@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { CartService } from "./core/services/cart.service";
 
 @Component({
   selector: "app-root",
@@ -7,4 +8,11 @@ import { Component } from "@angular/core";
 })
 export class AppComponent {
   title = "Bike Shop";
+  isCartOpen$ = this.cartService.isCartOpen$;
+
+  constructor(private cartService: CartService) {}
+
+  openCart() {
+    this.cartService.openCart();
+  }
 }
