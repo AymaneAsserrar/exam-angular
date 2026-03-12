@@ -4,7 +4,7 @@
   "projects": {
     "bike-shop": {
       "projectType": "application",
-      "root": "bike-shop",
+      "root": "",
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
@@ -93,5 +93,8 @@
       }
     }
   },
-  "defaultProject": "bike-shop"
+  "defaultProject": "bike-shop",
+  "cli": {
+    "analytics": false
+  }
 }
